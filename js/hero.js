@@ -12,28 +12,28 @@ function hero() {
     const list = [
         {
             id : 0,
-            cv : '../img/hero-img/cv-1.png',
-            avatar : '../img/hero-img/img-1.jpg'
+            cv : './img/hero-img/cv-1.png',
+            avatar : './img/hero-img/img-1.jpg'
         },
         {
             id : 1,
-            cv : '../img/hero-img/cv-2.png',
-            avatar : '../img/hero-img/img-2.jpg'
+            cv : './img/hero-img/cv-2.png',
+            avatar : './img/hero-img/img-2.jpg'
         },
         {
             id : 2,
-            cv : '../img/hero-img/cv-3.png',
-            avatar : '../img/hero-img/img-3.jpg'
+            cv : './img/hero-img/cv-3.png',
+            avatar : './img/hero-img/img-3.jpg'
         },
         {
             id : 3,
-            cv : '../img/hero-img/cv-4.png',
-            avatar : '../img/hero-img/img-4.jpg'
+            cv : './img/hero-img/cv-4.png',
+            avatar : './img/hero-img/img-4.jpg'
         },
         {
             id : 4,
-            cv : '../img/hero-img/cv-5.png',
-            avatar : '../img/hero-img/img-5.jpg'
+            cv : './img/hero-img/cv-5.png',
+            avatar : './img/hero-img/img-5.jpg'
         },
     ]
     const cv = $('.hero-right-img-cv')
