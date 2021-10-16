@@ -1,0 +1,138 @@
+.slider {
+    padding-top: 13.5rem;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 5;
+    background-color: #fff;
+
+    &_heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6.5rem;
+
+        &-title {
+            font-size: 3.2rem;
+            color: #000;
+            font-weight: bold;
+            width: 37.6rem;
+            line-height: 1.45;
+        }
+
+        &-link {
+            font-size: 1.6rem;
+            color: $text-color;
+            position: relative;
+            cursor: pointer;
+            transition: color 0.2s linear;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: calc( 100% + 0.4rem);
+                height: 0.1rem;
+                width: 100%;
+                background-color: #000;
+                transition: color 0.2s linear;
+            }
+
+            &:hover {
+                color: $blue-color;
+            }
+            &:hover::after {
+               background-color: $blue-color;
+            }
+
+        }
+    }
+
+    &_list {
+        display: flex;
+        width: fit-content;
+        transition: margin 0.4s linear;
+        padding-left: calc((100% - 120rem)/2);
+
+        &-btn-wrapper {
+            position: absolute;
+            top: 55%;
+            left: 10%;
+            right: 10%;
+            height: 4rem;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-btn {
+            $height : 5rem;
+            height: $height;
+            width: $height;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
+            transition: 0.2s linear;
+
+                &-icon {
+                    font-size: 1.6rem;
+                    color: $text-color;
+                    font-weight: bold;
+                }
+            &.disable {
+                background-color: transparent;
+                box-shadow: unset;
+            }
+
+            &.disable &-icon{
+                display: none;
+            }
+
+            &:not(.disable):hover {
+                background-color: #f7f3f3;
+                cursor: pointer;
+            }
+
+            &:active {
+                transform: scale(0.8);
+            }
+        }
+    }
+
+    &_item {
+        width: 52.2rem;
+        height: 64.3rem;
+        margin: 0 2.5rem;
+        display: block;
+        position: relative;
+
+        &-img {
+            height: 100%;
+            width: 100%;
+        }
+
+        &-icon {
+            $height : 7rem;
+            height: $height;
+            width: $height;
+            border-radius: 50%;
+            background-color: $blue-color;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            
+            & > i {
+                color: #fff;
+                font-size: 2.6rem;
+            }
+        }
+    }
+}

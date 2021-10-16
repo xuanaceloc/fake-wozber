@@ -1,0 +1,156 @@
+.body {
+
+    & .design{
+        margin-top: 24rem;
+        margin-bottom: 17.6rem;
+        display: flex;
+        flex-direction: column;
+
+        &_heading {
+            display: block;
+            margin: 0 auto;
+
+            &-subTitle {
+                font-size: 1.2rem;
+                color:#46d4e0;
+                margin-bottom: 2.6rem;
+                display: block;
+                font-weight: bold;
+                letter-spacing: 0.4rem;
+                text-align: center;
+            }
+
+            &-title {
+                font-size: 3.2rem;
+                color: $text-color;
+                font-weight: bold;
+            }
+        }
+
+        &_animation {
+            &-wrapper {
+                width: 100rem;
+                height: 66rem;
+                border: 0.2rem solid #eee;
+                margin: 6.5rem auto 0 auto;
+                border-radius: 3rem;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &-icon {
+                $timeTransition : 0.15s;
+                $edge : 9.6rem;
+                height: $edge;
+                width: $edge;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 13.6rem;
+                left: 9.2rem;
+
+                &-link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    color: transparent;
+                    transition: all $timeTransition linear;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-image: url("../img/body-img/animation/smile-coin.svg");
+
+                    &:hover {
+                        transform:  rotateZ(-20deg);
+                        color: #fff;
+                        background-color: $blue-color;
+                        background-image: none;
+                    }
+                }
+
+                &:hover {
+                    transition: all $timeTransition linear;
+                    transform: scale(1.2);
+                }
+
+            }
+
+            &-img {
+                height: 53.5rem;
+                width: 37.5rem;
+                
+                &-item {
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                    transform-style: preserve-3d;
+                    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.05);
+                    animation: bodyDesginAnimation 4s linear 0s infinite;
+
+                    &-font {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        backface-visibility: hidden;
+                    }
+
+                    &-back {
+                        height: 100%;
+                        width: 100%;
+                        backface-visibility: hidden;
+                        transform: rotateY(180deg);
+                        position: absolute;
+                    }
+
+                    & img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    &.hidden {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &_content {
+            width: 100%;
+
+            &-list {
+                margin-top: 2rem;
+                display: flex;
+                justify-content: space-between;
+                flex-basis: 3;
+                flex-wrap: wrap;
+            }
+
+            &-item {
+                width: 30%;
+                margin-top: 5rem;
+
+                &-title {
+                    font-size: 2.2rem;
+                    color: $text-color;
+                    font-weight: bold;
+                }
+
+                &-desc {
+                    font-size: 1.4rem;
+                    margin-top: 1.8rem;
+                    display: block;
+                    color: #222;
+                    line-height: 1.5;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

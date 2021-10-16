@@ -1,0 +1,196 @@
+
+.header {
+    height: $heigth-header;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: box-shadow 0.3s linear;
+
+    &_nav {
+        height: 100%;
+        // logo
+        &-logo {
+            height: 100%;
+            width: 150px;
+            &-link {
+                height: inherit;
+                width: inherit;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        // menu
+        &-menu {
+            width: 56.4rem;
+            margin-left: 2.6rem;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        // menu item
+        &-item {
+            padding: 1rem 0;
+            &-link {
+                color: $text-color;
+                font-size: 1.4rem;
+                display: block;
+                position: relative;
+
+                // item underline
+                &::after {
+                    content: "";
+                    display: none;
+                    position: absolute;
+                    background-color: $text-color;
+                    height: 0.1rem;
+                    width: 100%;
+                    bottom: -0.3rem;
+                }
+            }
+            &:hover .header_nav-item-link::after {
+                display: block;
+                animation: growUp 0.2s linear;
+            }
+
+            &.active .header_nav-item-link::after {
+                display: block;
+            }
+        }
+
+        &-submenu{
+            width: 25.8rem;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+
+            // login
+            &-login {
+                padding: 1rem 0;
+
+                &-link {
+                    color: $text-color;
+                    font-size: 1.4rem;
+                    cursor: pointer;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        display: none;
+                        position: absolute;
+                        background-color: $text-color;
+                        height: 0.1rem;
+                        width: 100%;
+                        bottom: -0.2rem;
+                    }
+                }
+
+                &:hover .header_nav-submenu-login-link::after {
+                    display: block;
+                    animation: growUp 0.2s linear;
+                }
+
+            }
+
+            // btn
+            &-btn {
+                padding: 1rem;
+                background-color: #ebebeb;
+                border-radius: 0.6rem;
+                transition: background-color 0.15s linear;
+
+                &-link {
+                    font-size: 1.4rem;
+                    color: $text-color;
+                    transition: color 0.15s linear;
+                }
+            }
+
+            // language
+            &-language {
+                width: 4.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                cursor: pointer;
+
+                &-select {
+                    display: none;
+                    font-size: 1.6rem;
+                    color: $text-color;
+                }
+
+                &-flag {
+                    height: 1.8rem;
+                    width: 2.6rem;
+                    background: url('../img/Flag_of_the_United_States_\(bordered\).svg') center center / cover no-repeat;
+                }
+
+                &-box {
+                    $box-height : 14.5rem;
+                    position: absolute;
+                    top: calc( 100% + 1rem);
+                    right: 0;
+                    width: 20rem;
+                    height: $box-height;
+                    background-color: #fff;
+                    box-shadow: 0 0.1rem 0.3rem #ccc;
+                    border-radius: 0.6rem;
+                    display: none;
+
+                    &-item {
+                        display: block;
+                        height: calc( $box-height / 4);
+                        font-size: 1.4rem;
+                        color: #717171;
+                        font-size: 1.4rem;
+                        padding-left: 1.4rem;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+
+                        &:not(.active):hover {
+                            background-color: #f1f0f0;
+                            color: $text-color;
+                            animation: OpUp 0.4s linear;
+                        }
+
+                        &.active {
+                            background-color: #0c66ff;
+                            color: #fff;
+                        }
+                    }
+
+                    &.show {
+                        display: block;
+                        animation: fadeIn 0.25s linear;
+                    }
+                }
+            }
+
+            // submenu menu btn
+            &-menu-btn {
+                display: none;
+            }
+        }
+    }
+
+    // header border bottom 
+
+    &_border-bottom {
+        width: 100%;
+        height: 0.1rem;
+        position: absolute;
+        bottom: 0;
+        // background-color: rgba(0, 0, 0, 0.1);
+    }
+}

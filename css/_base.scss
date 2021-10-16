@@ -1,0 +1,95 @@
+$text-color : #222;
+$blue-color : #0c66ff;
+$heigth-header: 6.5rem ;
+@keyframes growUp {
+    from {
+        width: 0;
+    } to {
+        width: 100%;
+    }
+}
+
+@keyframes OpUp {
+    from {
+        background-color: #fff;
+    } to {
+        background-color: #f1f0f0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes topDown {
+    from {
+        transform: scaleY(85%);
+    } to {
+        transform: scaleY(100%);
+    }
+}
+
+@keyframes skewToCv {
+    0% {
+        transform: scale(0.8) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
+        opacity: 0.2;
+    } 25% {
+        transform: scale(1) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
+        opacity: 1;
+    } 80% {
+        transform: scale(1) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
+        opacity: 1;
+    } 
+    95% {
+        transform: scale(1.05) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes skewToAvatar {
+    0% {
+        transform: scale(0.8) rotateX(4deg) rotateY(-16deg) rotateZ(4deg) translateY(-50%);
+        opacity: 0;
+    } 40% {
+        transform: scale(0.8) rotateX(4deg) rotateY(-16deg) rotateZ(4deg) translateY(-50%);
+        opacity: 0;
+    } 55% {
+        transform: scale(1) rotateX(4deg) rotateY(-16deg) rotateZ(4deg) translateY(-50%);
+        opacity: 1;
+    } 80% {
+        transform: scale(1) rotateX(4deg) rotateY(-16deg) rotateZ(4deg) translateY(-50%);
+        opacity: 1;
+    } 95% {
+        transform: scale(1.05) rotateX(4deg) rotateY(-16deg) rotateZ(4deg) translateY(-50%);
+        opacity: 0;
+    } 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bodyDesginAnimation {
+    0% {
+        transform: scale(1) rotateY(90deg);
+    } 5%{
+        transform: scale(1) rotateY(180deg);
+    }35% {
+        transform: scale(1) rotateY(180deg);
+    } 45% {
+        transform: scale(1.1) rotateY(180deg);
+    } 55% {
+        transform: scale(1.1) rotateY(360deg);
+    } 65% {
+        transform: scale(1) rotateY(360deg);
+    } 95%{
+        transform: scale(1) rotateY(360deg);
+    }100% {
+        transform: scale(1) rotateY(450deg);   
+    }
+}
